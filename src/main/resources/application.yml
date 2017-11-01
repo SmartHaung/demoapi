@@ -1,0 +1,33 @@
+#DataSource Config
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://huangwenbin.xin:3306/demo
+    username: demo
+    password: demo
+  redis:
+    database: 0
+    host : huangwenbin.xin
+    port: 6379
+    password:
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: -1
+
+#Spring Session
+  session:
+    store-type: none
+
+#config for redis
+
+
+#Mybatis Config
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+#Logging Config
+logging:
+  path: /var/log/
